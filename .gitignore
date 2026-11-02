@@ -1,0 +1,41 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and operating-system metadata
+.venv/
+venv/
+.DS_Store
+._*
+Thumbs.db
+.idea/
+.vscode/
+
+# Credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+!.env.template
+*.key
+*.pem
+credentials*.json
+service-account*.json
+secrets*.json
+secrets*.yaml
+secrets*.yml
+configs/*.local.yaml
+configs/*.local.yml
+
+# Private datasets and generated experiment state
+/data/
+/logs/
+/results/
+/output/
+/outputs/
+user_profiles/
+user_profile_traces/

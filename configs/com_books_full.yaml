@@ -1,0 +1,48 @@
+# HARP configuration - Books
+
+dataset:
+  name: "instructrec-books"
+  data_format: "processed"            # <name>.inter / .meta / .instruction files
+  data_dir: "data/processed/instructrec-books"   # folder that contains the files above
+
+memory:
+  k: 16                      # neighbours kept by the pruner
+  tau: 1800                  # context token budget
+  n_facets: 7               # preference facets requested in Stage-R
+  mix_min_users: 4          # minimum user neighbours among the k
+  mix_min_items: 6          # minimum item neighbours among the k
+  fanout_cap: 8             # cap on neighbours updated in Stage-W
+  enable_temporal_weighting: false
+
+prompts:
+  dir: "prompts/"
+
+llm:
+  provider: "openai"
+  model: "gpt-4o-mini"
+  api_base: "http://api.example.invalid/llmproxy"
+  api_key: "REPLACE_WITH_API_KEY"
+  api_version: "2024-08-01-preview"
+  temperature: 0.0
+
+pruner:
+  mode: "llm_rules"                # LLM-rule pruner
+
+reranker:
+  mode: "llm"
+
+train:
+  eval_feedback: "gt"
+  parallel_workers: 8
+  warmup_parallel_workers: 8
+
+warmup:
+  enabled: true
+  rounds: 1
+
+# user profile reflection (Sync)
+profile:
+  max_rules_per_user: 3
+
+eval:
+  candidate_size: 10
