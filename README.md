@@ -1,6 +1,6 @@
 # HARP: Training-Free Dual-Profile Agentic Communication for LLM-Based Recommendation
 
-Official code for **HARP**, published at **NeurIPS 2026**.
+Code implementation of HARP (NeurIPS 2026).
 
 HARP views LLM-based recommendation as a communication process between a user agent and item agents, in four stages: **Build**, **Transmit**, **Understand**, **Sync**. It adds three operators to a frozen LLM backbone and needs no training:
 
