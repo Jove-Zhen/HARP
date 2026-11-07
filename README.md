@@ -2,6 +2,8 @@
 
 Code implementation of HARP (NeurIPS 2026).
 
+Paper: [arXiv:2611.05319](https://arxiv.org/abs/2611.05319)
+
 HARP views LLM-based recommendation as a communication process between a user agent and item agents, in four stages: **Build**, **Transmit**, **Understand**, **Sync**. It adds three operators to a frozen LLM backbone and needs no training:
 
 - **Dual profiles (Build).** Users and items both get a structured four-channel profile (preference, quality, context, audience). User profiles come from one LLM call; item profiles come from deterministic rules with no LLM call.
@@ -82,11 +84,11 @@ Each run writes to `results/<run_tag>/`: the metrics (Hit@K and NDCG@K for K in 
 ## Citation
 
 ```bibtex
-@inproceedings{tao2026harp,
-  title     = {{HARP}: Training-Free Dual-Profile Agentic Communication for {LLM}-Based Recommendation},
-  author    = {Tao, Zhen and Zhou, Xun and Chen, Xuhui and Qiao, Ziyue and Sun, Qingqiang},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2026}
+@article{tao2026harp,
+  title={HARP: Training-Free Dual-Profile Agentic Communication for LLM-Based Recommendation},
+  author={Tao, Zhen and Zhou, Xun and Chen, Xuhui and Qiao, Ziyue and Sun, Qingqiang},
+  journal={arXiv preprint arXiv:2611.05319},
+  year={2026}
 }
 ```
 
